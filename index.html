@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cindy's Collection — men's fashion, clothing and accessories.">
+  <title>Cindy's Collection | Men's Fashion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">FRESH LOOKS. EVERYDAY CONFIDENCE. <span> | </span> Welcome to Cindy's Collection</div>
+  <header class="site-header">
+    <a class="brand" href="#"><span class="brand-mark">C</span><span>CINDY'S <b>COLLECTION</b><small>MEN'S FASHION</small></span></a>
+    <nav class="desktop-nav">
+      <a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="accountBtn" aria-label="Account">♙</button>
+      <button class="icon-btn cart-trigger" id="cartBtn" aria-label="Shopping cart">♧<span id="cartCount">0</span></button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">THE NEW SEASON EDIT</p>
+        <h1>Style that speaks<br><em>for you.</em></h1>
+        <p class="hero-text">Discover men's essentials made for confidence, comfort and every occasion.</p>
+        <a class="btn btn-dark" href="#shop">SHOP THE COLLECTION <span>→</span></a>
+        <div class="hero-note"><span class="note-line"></span> SIMPLE. SHARP. TIMELESS.</div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-image-label">THE<br><b>CONFIDENCE</b><br>COLLECTION</div>
+      </div>
+      <div class="hero-index">01 <span>/</span> 03</div>
+    </section>
+
+    <section class="benefits">
+      <div><span>✦</span><p><b>Curated style</b><small>Pieces selected with care</small></p></div>
+      <div><span>◇</span><p><b>Quality first</b><small>Style meets everyday comfort</small></p></div>
+      <div><span>↗</span><p><b>Easy shopping</b><small>A smooth shopping experience</small></p></div>
+    </section>
+
+    <section class="shop-section section-pad" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">FIND YOUR LOOK</p><h2>Shop the collection</h2></div>
+        <p class="section-intro">Everyday essentials and standout pieces<br>for a wardrobe that works.</p>
+      </div>
+      <div class="shop-toolbar">
+        <div class="filters" id="filters">
+          <button class="filter active" data-category="All">All products</button>
+          <button class="filter" data-category="Shirts">Shirts</button>
+          <button class="filter" data-category="Trousers">Trousers</button>
+          <button class="filter" data-category="Shoes">Shoes</button>
+          <button class="filter" data-category="Accessories">Accessories</button>
+        </div>
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search products..."></label>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="statement" id="about">
+      <div class="statement-image"></div>
+      <div class="statement-copy"><p class="eyebrow">OUR POINT OF VIEW</p><h2>Good style is<br><em>always personal.</em></h2>
+        <p>At Cindy's Collection, we believe getting dressed should feel effortless. Explore versatile men's fashion chosen to help you look sharp and feel confident, wherever the day takes you.</p>
+        <a href="#shop" class="text-link">EXPLORE OUR COLLECTION <span>→</span></a>
+      </div>
+    </section>
+
+    <section class="newsletter section-pad">
+      <p class="eyebrow">STAY IN THE LOOP</p><h2>A little style in<br>your inbox.</h2>
+      <p>Sign up for collection updates, new arrivals and special offers.</p>
+      <form id="newsletterForm" class="newsletter-form"><input type="email" placeholder="Enter your email address" required><button type="submit">SUBSCRIBE →</button></form>
+      <small id="newsletterMessage"></small>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-main">
+      <a class="brand footer-brand" href="#"><span class="brand-mark">C</span><span>CINDY'S <b>COLLECTION</b><small>MEN'S FASHION</small></span></a>
+      <p>Wear your confidence.<br>Make every day your own.</p>
+      <div><b>EXPLORE</b><a href="#shop">Shop all</a><a href="#about">Our story</a><a href="#contact">Contact</a></div>
+      <div><b>GET IN TOUCH</b><a href="mailto:hello@cindyscollection.com">hello@cindyscollection.com</a><span>Accra, Ghana</span></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Cindy's Collection. All rights reserved.</span><span>STYLE WITH CONFIDENCE.</span></div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="drawer-head"><h3>Your bag <span id="drawerCount">(0)</span></h3><button class="close-btn" id="closeCart">×</button></div>
+    <div class="cart-items" id="cartItems"><p class="empty-cart">Your bag is waiting for something great.</p></div>
+    <div class="cart-footer"><div class="subtotal"><span>Subtotal</span><b id="cartSubtotal">GH₵0.00</b></div><p>Delivery costs are calculated at checkout.</p><button class="btn btn-dark checkout-btn" id="checkoutBtn">CONTINUE TO CHECKOUT →</button></div>
+  </aside>
+
+  <div class="modal" id="accountModal">
+    <div class="modal-card"><button class="close-btn modal-close" id="closeAccount">×</button><p class="eyebrow">WELCOME TO CINDY'S</p><h2>Your account</h2>
+      <div class="auth-tabs"><button class="auth-tab active" data-mode="login">Log in</button><button class="auth-tab" data-mode="register">Create account</button></div>
+      <form id="authForm"><label id="nameField" class="hidden">Full name<input type="text" placeholder="Your name"></label><label>Email address<input type="email" placeholder="you@example.com" required></label><label>Password<input type="password" placeholder="At least 6 characters" minlength="6" required></label><button class="btn btn-dark auth-submit" type="submit">LOG IN →</button></form>
+      <small id="authMessage">Account access is a front-end demo. Connect a secure backend before accepting real accounts.</small>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
